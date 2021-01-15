@@ -1,33 +1,40 @@
 import React, { Component } from 'react';
 import Directory from './DirectoryComponent';
-import { ITEMS } from '../shared/items';
 import ItemInfo from './ItemInfoComponent';
-import { View } from 'react-native';
+import { View, Platform } from 'react-native';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+
+const DirectoryNavigator = createStackNavigator(
+    {
+        Directory: { screen: Directory },
+        ItemInfo: { screen: ItemInfo }
+    }, 
+    {
+        initialRouteName: 'Directory',
+        defaultNavigationOptions: {
+            headerStyle: {
+                backgroundColor: '#5637DD'
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: '#fff'
+            }
+        }
+    }
+);
+
+const AppNavigator = createAppContainer(DirectoryNavigator);
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: ITEMS,
-            selectedItem: null
-        };
-    }
-
-    onItemSelect(itemId) {
-        this.setState({selectedItem: itemId});
-    }
-
     render() {
         return (
-            <View style={{flex: 1}}>
-                <Directory
-                    items={this.state.items}
-                    onPress={itemId => this.onItemSelect(itemId)}
-                />
-                <ItemInfo
-                    item={this.state.items.filter(
-                        item => item.id === this.state.selectedItem)[0]}
-                />
+            <View
+                style={{
+                    flex: 1,
+                    paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight
+            }}>
+                <AppNavigator />
             </View>
         );
     }
