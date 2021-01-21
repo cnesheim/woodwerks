@@ -12,7 +12,7 @@ function RenderItem({item}) {
                 featuredTitle={item.name}
                 image={require('./images/blackHorseBench.jpg')}
             >
-                <Text style={{margin: 10}}>
+                <Text style={{margin: 30}}>
                     {item.description}
                 </Text>
             </Card>
@@ -33,7 +33,7 @@ class Home extends Component {
     }
 
     static navigationOptions = {
-        title: 'Home'
+        title: 'WoodWorks Home'
     }
 
     render() {

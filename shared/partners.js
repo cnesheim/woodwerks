@@ -1,30 +1,34 @@
 export const PARTNERS = [
     {
         id: 0,
-        name: "Bootstrap Outfitters",
-        image: "/assets/images/bootstrap-logo.png",
-        featured: false,
-        description: "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat."
-    },
+        name: "Rockler Woodworking",
+        image: "/assets/images/rocklerLogo.gif",
+        featured: true,
+        description: "Create With Confidence.",
+        website: "https://www.rockler.com/"
+        },
     {
         id: 1,
-        name: "Git Out Expeditions",
-        image: "/assets/images/git-logo.png",
+        name: "Woodworkers Service Lumber",
+        image: "/assets/images/WoodworkersLogo.png",
         featured: false,
-        description: "Join Git Out Expeditions to explore new horizons with a group of other adventurers!"
+        description: "Your Friendly Online Hardwood Lumber Supplier.",
+        website: "https://www.woodworkerssource.com/"
     },
     {
         id: 2,
-        name: "Mongo Fly Shop",
-        image: "/assets/images/mongo-logo.png",
+        name: "Minnesota Woodworkers Guild",
+        image: "/assets/images/MNGuildLogo.jpg",
         featured: false,
-        description: "Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop."
+        description: "Your community source for woodworking classes, ideas, and classifieds.",
+        website: "https://www.mnwwg.org/"
     },
     {
         id: 3,
-        name: "Node Outdoor Apparel",
-        image: "/assets/images/node-logo.png",
-        featured: true,
-        description: "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+        name: "Instructables Workshop",
+        image: "/assets/images/instructables-logo.png",
+        featured: false,
+        description: "We make it easy to learn how to make anything, one step at a time. From the stovetop to the workshop, you are sure to be inspired by the awesome projects that are shared everyday.",
+        website: "https://www.instructables.com/"
     }
 ]
